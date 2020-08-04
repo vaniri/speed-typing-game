@@ -15,21 +15,20 @@ const GameBoxComponent = () => {
 
     return (
         <div>
-            <h1>How fast do you type?</h1>
+            <h2>Time remaning: {timeRemaining}</h2>
+            <h2>Word count: {wordCount}</h2>
             <textarea
                 ref={textBoxRef}
                 value={text}
                 onChange={handleChange}
                 disabled={!isTimeRunning}
             />
-            <h4>Time remaning: {timeRemaining}</h4>
             <button
                 onClick={startGame}
                 disabled={isTimeRunning}
             >
-                Start!
+                Start
             </button>
-            <h1>Word count: {wordCount}</h1>
         </div>
     )
 }
